@@ -1,0 +1,137 @@
+/* Общие стили */
+body {
+  font-family: "Roboto", sans-serif;  margin: 0;
+  padding: 8px 24px;
+}
+
+h2, h1 {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  font-weight: 100;
+  margin: -8px -24px;
+  margin-bottom: 8px;
+  padding: 16px;
+}
+
+.bmr-calculator {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.B {
+  margin-bottom: 20px;
+}
+.M {
+  margin-bottom: 20px;
+}
+.R {
+  margin-bottom: 20px;
+}
+
+.controls input[type="text"],
+.controls input[type="radio"] {
+  margin-right: 10px;
+  
+}
+
+.unit {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  right: 20px;
+  top: 50px;
+  color: #777;
+}
+
+.training input[type="radio"] + label {
+  margin-right: 10px;
+}
+
+.calculate-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result {
+  text-align: center;
+  color: #4e4e4e;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.result .B {
+  color: green;
+  font-size: 38px;
+  font-weight: 600;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-top: 100px;
+}
+
+.result .M {
+  color: green;
+  font-size: 38px;
+  font-weight: 600;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-top: 100px;
+}
+
+.result .R {
+  color: green;
+  font-size: 38px;
+  font-weight: 600;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-top: 100px;
+}
+
+.result .calculate-btn {
+  padding: 8px 24px;
+  margin: 16px 0;
+  font-size: 18px;
+  font-weight: 100;
+  text-transform: uppercase;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 32px;
+  margin-top: 30px;
+  
+}
+
+.result-message {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  display: none;
+  font-size: 18px;
+}
+
+/* Стили для упражнений */
+#exerciseHeader {
+  display: none;
+}
+
+.video {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.video video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}

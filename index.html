@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+    background: #c7b39b url(back.jpeg);
+    background-size: contain
+     /* Цвет фона и путь к файлу */
+   }
+      div {
+        /* Цвет текста */
+       background: white; /* Цвет фона */
+       padding: 2px; /* Поля вокруг текста */
+      }
+     </style>
+    <title>Петров</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <div class="bmr-calculator">
+
+      <h1>Победишь себя - победишь всех!</h1>
+      <h3>ПОЧЕМУ ВАЖНО ЗАНИМАТЬСЯ СПОРТОМ</h3>
+        <p>•	здоровое увлечение ребенка, которое не даст ему в столь непростом возрасте отвлечься на бесполезные и разрушающие занятия</p>
+        <p>•	спорт — это преодоление собственных слабостей, это самодисциплина, стремление к достижению результата, психологическая устойчивость и многое другое, что так важно уметь в жизни не только подростку, но и вообще любому человеку</p>
+        <p>•	спорт — работа над своим телом и характером</p>
+        <p>•	командные виды спорта обеспечивают взаимодействие с людьми и внешним миром — это умение налаживать связи, устанавливать контакт и помогать друг другу в сложных ситуациях</p>
+        <p>•	спорт — это эмоции, пусть лучше ребенок получит их с помощью физической активности, чем от компьютерных игр, дурных компаний и сомнительных приключений</p>
+      </p>
+      <h2>Калькулятор</h2>
+      <div class="controls">
+        <form>
+          <h3>Возраст(10-100)</h3>
+          <input type="text" id="age" value="28" />
+
+          <div class="gender">
+            <h3>Пол</h3>
+            <input type="radio" id="male" value="male" name="gender" checked />
+            <label for="male">Мужчина</label>
+            <input type="radio" id="female" value="female" name="gender" />
+            <label for="female">Женщина</label>
+          </div>
+          <div class="training">
+            <h3>Ваша цель</h3>
+            <input type="radio" id="gain" value="gain" name="training" checked />
+            <label for="gain">Набрать массу</label>
+            <input type="radio" id="lose" value="lose" name="training" />
+            <label for="lose">Похудеть</label>
+          </div>
+
+          <div class="height">
+            <h3>Рост(см)</h3>
+            <input type="text" id="height" value="180" />
+            <div class="unit">cm</div>
+          </div>
+
+          <div class="weight">
+            <h3>Вес(кг)</h3>
+            <input type="text" id="weight" value="65" />
+            <div class="unit">kg</div>
+          </div>
+        </form>
+      </div>
+
+      <div class="result">
+        <button class="calculate-btn">Рассчитать</button>
+
+        <div class="result-message">
+          <p><span class="B">0</span> Белков</p>
+          <p></p><span class="M">0</span> Жиров</p>
+          <span class="R">0</span> Углеводов
+        </div>
+
+        <div class="error-message">
+          <p>проверьте корректность данных</p>
+        </div>
+      </div>
+      <div id="exerciseHeader" style="display: none;">
+
+
+        <h2>Подходящие упражнения</h2 >
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/1.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Подтягивания 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/2.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Брусья 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/3.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Присед в гааке 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/4.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Жим ногами 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/5.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Жим лёжа 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/6.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Жим на наклонной скамье
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/7.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Присед со штангой 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/8.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Строгий подъём штанги на бицепс
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/9.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Строгий подъём штанги на бицепс 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/10.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Тяга вертикального блока 
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/11.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Тяга т-грифа к поясу
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/12.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Становая тяга сумо
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/13.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Вертикальный жим гантелей
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/14.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Французский жим
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/15.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Подъём гантелей перед собой
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/16.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Разводка гантелей
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/17.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Ходьба на беговой дорожке
+      </div>
+      <div class="video" style="display: none;">
+        <video width="320" height="240" controls>
+          <source src="vids/16.MOV" type="video/mp4">        
+        Your browser does not support the video tag.        
+        </video>
+        Тяга на прямых ногах со штангой
+      </div>
+      </div>
+
+    
+      
+    
+
+    <script src="main.js"></script>
+  </body>
+</html>
