@@ -30,6 +30,9 @@ h2, h1 {
 .R {
   margin-bottom: 20px;
 }
+.cals {
+  margin-bottom: 20px;
+}
 
 .controls input[type="text"],
 .controls input[type="radio"] {
@@ -85,6 +88,15 @@ h2, h1 {
 }
 
 .result .R {
+  color: green;
+  font-size: 38px;
+  font-weight: 600;
+  margin-right: 8px;
+  vertical-align: middle;
+  margin-top: 100px;
+}
+
+.result .cals {
   color: green;
   font-size: 38px;
   font-weight: 600;

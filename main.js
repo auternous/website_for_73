@@ -1,12 +1,14 @@
-const calories = document.querySelector(".bmr-calculator .result .B");
-const calories1 = document.querySelector(".bmr-calculator .result .M");
-const calories2 = document.querySelector(".bmr-calculator .result .R");
+// Выбираем элементы на странице, с которыми будем работать
+const calories = document.querySelector(".bmr-calculator .result .B"); //белки
+const calories1 = document.querySelector(".bmr-calculator .result .M"); //жиры
+const calories2 = document.querySelector(".bmr-calculator .result .R"); //углеводы
+const calories3 = document.querySelector(".bmr-calculator .result .cals");
 const calculateBtn = document.querySelector(
   ".bmr-calculator .result .calculate-btn"
 );
-const age = document.querySelector(".bmr-calculator form #age");
-const height = document.querySelector(".bmr-calculator form #height");
-const weight = document.querySelector(".bmr-calculator form #weight");
+const age = document.querySelector(".bmr-calculator form #age"); //ввод возраста
+const height = document.querySelector(".bmr-calculator form #height"); //ввод роста
+const weight = document.querySelector(".bmr-calculator form #weight"); // ввод веса
 const errorMessage = document.querySelector(
   ".bmr-calculator .result .error-message"
 );
@@ -22,15 +24,15 @@ for(let i=0;i<vidos.length;i++){
 
 //15 65 20
 
-const calculateBMR = (weight, height, age, gender) => {
+const calculateBMR = (weight, height, age, gender) => { //функция для рассчёта бжу
   if (gender == "male") {
-    return 10 * weight + 6.25 * height - 5 * age + 5;
+    return 10 * weight + 6.25 * height - 5 * age + 5; //формула для мужчин
   }
 
-  return 10 * weight + 6.25 * height - 5 * age - 161;
+  return 10 * weight + 6.25 * height - 5 * age - 161; // формула для женщин
 };
 
-calculateBtn.addEventListener("click", () => {
+calculateBtn.addEventListener("click", () => { //ошибка, если что-то из вводных неверно
   if (
     age.classList.contains("invalid") ||
     height.classList.contains("invalid") ||
@@ -48,24 +50,25 @@ calculateBtn.addEventListener("click", () => {
 
   let BMR = calculateBMR(weight.value, height.value, age.value, genderValue);
 
-  calories.innerHTML = (BMR*0.15).toLocaleString("en-US");
-  calories1.innerHTML = (BMR*0.20).toLocaleString("en-US");
-  calories2.innerHTML = (BMR*0.65).toLocaleString("en-US");
+  calories.innerHTML = (BMR*0.15).toLocaleString("en-US"); //вывод белков 15% от БЖУ
+  calories1.innerHTML = (BMR*0.20).toLocaleString("en-US"); //вывод белков 20% от БЖУ
+  calories2.innerHTML = (BMR*0.65).toLocaleString("en-US");  //вывод белков 65% от БЖУ
+  calories3.innerHTML = (BMR).toLocaleString("en-US");
   
 });
 
 // Input Validation
-
+// Обработчик события "input" для поля "возраст"
 age.addEventListener("input", (e) => {
   let ageValue = e.target.value;
-
+// Проверяем правильность ввода данных и добавляем класс "invalid" к полю в случае ошибки
   if (!ageValue || isNaN(ageValue) || ageValue < 10 || ageValue > 100) {
     age.classList.add("invalid");
   } else {
     age.classList.remove("invalid");
   }
 });
-
+// Обработчик события "input" для поля "рост"
 height.addEventListener("input", (e) => {
   let heightValue = e.target.value;
 
@@ -75,17 +78,18 @@ height.addEventListener("input", (e) => {
     height.classList.remove("invalid");
   }
 });
-
+//то же самое, но для веса
 weight.addEventListener("input", (e) => {
   let weightValue = e.target.value;
-
+   // Проверяем правильность ввода данных и добавляем класс "invalid" к полю в случае ошибки
   if (!weightValue || isNaN(weightValue) || weightValue < 0) {
     weight.classList.add("invalid");
   } else {
     weight.classList.remove("invalid");
   }
 });
-function showVids(){
+function showVids(){ //функция для отображения видео(они все уже добавлены в html файл, но они не видимы)
+  //функция убирает невидимость с нужных нам видео
   document.getElementById("exerciseHeader").style.display="block";//выводим заголовок
   var vid=document.getElementsByClassName("video");// массив всех элементов video
   for(let i=0;i<vid.length;i++){
@@ -94,7 +98,8 @@ function showVids(){
   if(document.getElementById("male").checked){ //набор массы для Мужчин
     if(document.getElementById("gain").checked){
       if ((document.getElementById('weight').value >= 55) && (document.getElementById('weight').value < 60)){
-        vid[6].style.display="block";
+        vid[6].style.display="block"; //важное пояснение 6 - это 5 видео, но из-за того, что оно в массиве,
+                                      //где счёт начинается с 0, поэтому номер увеличивается на 1
         vid[4].style.display="block";
         vid[2].style.display="block";
         vid[14].style.display="block";
@@ -153,8 +158,6 @@ function showVids(){
 
   }
   if(document.getElementById("female").checked){
-   
-    
     if(document.getElementById("gain").checked){   //набор массы для Девушек
       if ((document.getElementById('weight').value < 40)){
         alert("вес некорректен")
@@ -187,12 +190,15 @@ function showVids(){
         vid[17].style.display="block";
         vid[13].style.display="block";
       }
+    
       if ((document.getElementById('weight').value > 75)){
         alert("вес некорректен")
+      }
       
       
     }
-    if(document.getElementById("lose").checked){ //похудение для Женщин
+    if(document.getElementById("lose").checked){
+      
       if ((document.getElementById('weight').value < 50)){
         alert("вес некорректен")
       }
@@ -243,5 +249,4 @@ function showVids(){
       }
     }
   }
-}
 };
